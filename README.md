@@ -2,7 +2,7 @@
 
 <p align="left">
   <b>Data Analyst & Data Scientist</b> · Lagos, Nigeria<br>
-  Senior Account Manager @ <b>Glovo</b> · Founder @ <b>Vantage Analytics</b> · Building <b>VenaNow</b>
+  Senior Data Analyst @ <b>Glovo</b> · Founder @ <b>Vantage Analytics</b> · Building <b>VenaNow</b>
 </p>
 
 ---
