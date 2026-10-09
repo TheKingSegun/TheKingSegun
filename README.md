@@ -62,10 +62,3 @@ Reusable models for valuing a business in Nigeria, where the exchange rate has t
 
 **Domain** · fraud detection · credit risk · A/B testing · customer lifetime value
 
-## How I work
-
-I start from the decision, not the dataset. An analysis that cannot change what somebody does next week is a report, not an answer.
-
-I keep the uncertainty visible. A model score, a forecast range, a category the classifier was not sure about: all of it is shown rather than rounded away, because a confident wrong number does more damage than an honest "we do not know yet".
-
-And I write down where each project stops, so a reader can tell the difference between something hard and something unfinished.
