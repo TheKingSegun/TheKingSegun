@@ -14,9 +14,7 @@ Founder of **Vantage Analytics**, helping Nigerian SMEs find out why revenue is 
 
 Many people in Lagos earn into one account and spend through three. No app sees all of them, but the statements do. [**VenaNow**](https://github.com/TheKingSegun/venanow) reads GTBank, Zenith, UBA, Access, OPay and Kuda statements in PDF, CSV or Excel and returns categorised spending, recurring payments, a health score and a 30 day cash flow forecast.
 
-The part I would point at: the rules are written for Lagos, not borrowed from a foreign budgeting app, and every category carries a confidence score so the interface can ask instead of guess. Re-uploading an overlapping month cannot double count spending, because each transaction is fingerprinted and unique in the database. Running the 83 test suite found two real bugs: the rules did not know the TotalEnergies rebrand, and Spectranet internet was filed as a subscription because a generic keyword fired before the provider name. Both fixed.
-
-It is honest about where it stops: about 1 in 4 transactions still land in miscellaneous, mostly Lagos food chains, and three dashboard endpoints are not yet wired to the database.
+The part I would point at: the rules are written for Lagos, not borrowed from a foreign budgeting app, and every category carries a confidence score so the interface can ask instead of guess. Re-uploading an overlapping month cannot double count spending, because each transaction is fingerprinted and unique in the database. 
 
 `Python` `pandas` `pdfplumber` `scikit-learn` `FastAPI` `PostgreSQL` `Docker`
 
