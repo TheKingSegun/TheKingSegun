@@ -1,54 +1,73 @@
-<h1 align="left">Hi, I'm David 👋</h1>
+# David Akomolafe
 
-<p align="left">
-  <b>Data Analyst & Data Scientist</b> · Lagos, Nigeria<br>
-  Senior Data Analyst @ <b>Glovo</b> · Founder @ <b>Vantage Analytics</b> · Building <b>VenaNow</b>
-</p>
+**Data analyst who works on the commercial side of the business.** I take messy operational data and turn it into the decision someone has to make on Monday: which partner to call, which spend to cut, which number is lying.
 
----
+Senior Data Analyst at **Glovo Nigeria**, working across commercial strategy, partner portfolio analysis and supply-side analytics. Before that, Business Intelligence Analyst at **First Bank of Nigeria**. Trained as a chemical engineer, which is where the habit started: state the method, show the measurement, do not report what you cannot reproduce.
 
-### What I Do
+Founder of **Vantage Analytics**, helping Nigerian SMEs find out why revenue is moving using their own data.
 
-I turn messy data into decisions that move businesses. With a background spanning **chemical engineering**, **banking BI** (First Bank of Nigeria), and **logistics analytics** (Glovo), I bring cross-industry rigour to every analysis.
-
-I run **Vantage Analytics** — a data consultancy helping Nigerian SMEs diagnose revenue problems with data, not guesswork.
+[LinkedIn](#) · segunlafe@gmail.com · Lagos, Nigeria · Open to remote and international roles
 
 ---
 
-### Tech Stack
+## VenaNow: where the money actually went
 
-```
-Languages:       Python · SQL · DAX
-Analytics:       pandas · numpy · scikit-learn · XGBoost · Prophet · statsmodels
-Visualisation:   Power BI · Tableau · Plotly · Seaborn · Matplotlib
-Data Eng:        PostgreSQL · Supabase · Excel · pdfplumber
-Other:           FastAPI · Jupyter · Git
-```
+Many people in Lagos earn into one account and spend through three. No app sees all of them, but the statements do. [**VenaNow**](https://github.com/TheKingSegun/venanow) reads GTBank, Zenith, UBA, Access, OPay and Kuda statements in PDF, CSV or Excel and returns categorised spending, recurring payments, a health score and a 30 day cash flow forecast.
 
----
+The part I would point at: the rules are written for Lagos, not borrowed from a foreign budgeting app, and every category carries a confidence score so the interface can ask instead of guess. Re-uploading an overlapping month cannot double count spending, because each transaction is fingerprinted and unique in the database. Running the 83 test suite found two real bugs: the rules did not know the TotalEnergies rebrand, and Spectranet internet was filed as a subscription because a generic keyword fired before the provider name. Both fixed.
 
-### Featured Projects
+It is honest about where it stops: about 1 in 4 transactions still land in miscellaneous, mostly Lagos food chains, and three dashboard endpoints are not yet wired to the database.
 
-| Project | Description | Stack |
-|---------|-------------|-------|
-| [nigeria-inflation-dashboard](https://github.com/TheKingSegun/nigeria-inflation-dashboard) | NBS CPI analysis + Power BI dashboard | Python, Power BI |
-| [customer-churn-prediction](https://github.com/TheKingSegun/customer-churn-prediction) | XGBoost + SHAP, ROC-AUC 0.891 | scikit-learn, XGBoost |
-| [ngx-stock-analysis](https://github.com/TheKingSegun/ngx-stock-analysis) | Momentum screener for NGX equities | Python, TA-Lib |
-| [bank-transaction-classifier](https://github.com/TheKingSegun/bank-transaction-classifier) | NLP pipeline for Nigerian bank statements | Python, NLP |
-| [lagos-restaurant-analytics](https://github.com/TheKingSegun/lagos-restaurant-analytics) | Menu engineering & delivery KPIs | SQL, Python |
-| [canada-labour-market-analysis](https://github.com/TheKingSegun/canada-labour-market-analysis) | StatsCan LFS deep-dive | Python, Plotly |
-| [financial-model-toolkit](https://github.com/TheKingSegun/financial-model-toolkit) | DCF, unit economics, FX sensitivity | Python, Excel |
-| [africa-ecommerce-eda](https://github.com/TheKingSegun/africa-ecommerce-eda) | Cross-country African market analysis | Python, seaborn |
-| [food-demand-forecasting](https://github.com/TheKingSegun/food-demand-forecasting) | Prophet vs ARIMA for delivery volumes | Prophet, statsmodels |
+`Python` `pandas` `pdfplumber` `scikit-learn` `FastAPI` `PostgreSQL` `Docker`
 
 ---
 
-### Currently Building
-- 🚀 **VenaNow** — AI-powered personal finance platform for the Nigerian market
-- 📊 **Vantage Analytics** — Data consultancy for Nigerian SMEs and startups
+## Analytics and machine learning
+
+### [Customer churn prediction](https://github.com/TheKingSegun/customer-churn-prediction): who is worth a call this week
+A retention team cannot call everyone, so the question is not "will this customer leave" but "who should we call first". An XGBoost model ranks customers by risk, and SHAP shows why each one was flagged so the agent knows what to say. On synthetic data where the true churn drivers are known, SHAP ranked exactly those four drivers above the four noise features, and calling the top 30% of ranked customers reached 91% of churners.
+`XGBoost` `SHAP` `Optuna` `scikit-learn`
+
+### [Food demand forecasting](https://github.com/TheKingSegun/food-demand-forecasting): how many riders on Friday night
+Delivery volume drives how many riders and how much stock a platform needs. Prophet and ARIMA compared for forecasting delivery volumes.
+`Prophet` `statsmodels`
+
+### [Nigeria inflation dashboard](https://github.com/TheKingSegun/nigeria-inflation-dashboard): what the CPI headline hides
+NBS publishes one headline number. This takes the underlying CPI data into a Power BI dashboard so you can see what is behind it.
+`Python` `Power BI`
+
+### [NGX stock analysis](https://github.com/TheKingSegun/ngx-stock-analysis): a momentum screen for Nigerian equities
+A screener for NGX listed stocks, built because most retail tools ignore the Nigerian market.
+`Python` `TA-Lib`
+
+### [Financial model toolkit](https://github.com/TheKingSegun/financial-model-toolkit): DCF, unit economics and FX sensitivity
+Reusable models for valuing a business in Nigeria, where the exchange rate has to be a sensitivity, not a fixed assumption.
+`Python` `Excel`
 
 ---
 
-<p align="left">
-  📍 Lagos, Nigeria &nbsp;|&nbsp; 🌍 Open to remote & international opportunities
-</p>
+## What I work on professionally
+
+| Domain | What that looked like |
+|---|---|
+| **Food delivery and logistics** | Partner portfolio analysis, supply-side performance and commercial deal support at Glovo Nigeria |
+| **Banking** | Business intelligence reporting at First Bank of Nigeria |
+| **SME advisory** | Revenue diagnostics for Nigerian small businesses through Vantage Analytics |
+
+## Tools
+
+**Languages** · Python · SQL · DAX
+**Analysis and ML** · pandas · scikit-learn · XGBoost · LightGBM · Prophet · statsmodels · SHAP
+**Data platforms** · BigQuery · Snowflake · dbt · PostgreSQL · Supabase
+**Reporting** · Power BI · Tableau · Plotly
+**Engineering** · FastAPI · Docker · Git
+
+**Domain** · fraud detection · credit risk · A/B testing · customer lifetime value
+
+## How I work
+
+I start from the decision, not the dataset. An analysis that cannot change what somebody does next week is a report, not an answer.
+
+I keep the uncertainty visible. A model score, a forecast range, a category the classifier was not sure about: all of it is shown rather than rounded away, because a confident wrong number does more damage than an honest "we do not know yet".
+
+And I write down where each project stops, so a reader can tell the difference between something hard and something unfinished.
